@@ -3,5 +3,5 @@ FROM runnable/django-starter
 # Add Repository
 ADD . /app/
 
-# Run Migrations & Server
-CMD ./manage.py test
+# Run Test
+CMD python manage.py migrate && python manage.py test

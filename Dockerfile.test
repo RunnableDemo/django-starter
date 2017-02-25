@@ -1,7 +1,8 @@
 FROM runnable/django-starter
+MAINTAINER Runnable, Inc.
 
 # Add Repository
-ADD . /app/
+COPY . /app/
 
-# Run Test
-CMD python manage.py migrate && python manage.py test
+# Run Migrations & Test
+CMD python manage.py migrate && cd django-starter && python manage.py test

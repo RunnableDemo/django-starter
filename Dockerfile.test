@@ -1,8 +1,0 @@
-FROM runnable/django-starter
-MAINTAINER Runnable, Inc.
-
-# Add Repository
-COPY . /app/
-
-# Run Migrations & Test
-CMD bash wait-for-postgres-then-run.sh python manage.py test
